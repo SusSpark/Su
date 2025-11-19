@@ -1,0 +1,190 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    margin-bottom: 40px;
+}
+
+nav button {
+    background: #fff;
+    color: #764ba2;
+    border: none;
+    border-radius: 10px;
+    padding: 16px 36px;
+    margin: 0 10px 10px 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s, color 0.3s;
+}
+
+nav button:hover {
+    background: #5a3480;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+section {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255 255 255 / 0.95);
+    color: #222;
+    border-radius: 12px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: none;
+    min-height: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+section.active {
+    display: block;
+}
+
+input[type="file"] {
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+#uploadMessage {
+    margin-top: 20px;
+    font-weight: 600;
+    color: green;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    word-break: break-word;
+}
+
+th {
+    background: #764ba2;
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.export-buttons {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.export-buttons button {
+    background: #764ba2;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.export-buttons button:hover {
+    background: #5a3480;
+}
+
+button.add-user {
+    background: #4caf50;
+    margin: 10px 0 20px 0;
+    display: inline-block;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+button.add-user:hover {
+    background: #388e3c;
+}
+
+button.delete-user {
+    background: #e53935;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.grade-stats {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #444;
+    background: #eee;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    color: #222;
+}
+
+#chartContainer canvas {
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+#noData {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999;
+    margin-top: 50px;
+}
+
+.email-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #764ba2;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.email-link:hover {
+    color: #5a3480;
+    text-decoration: underline;
+}

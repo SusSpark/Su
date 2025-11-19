@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электронный журнал</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="static/js/scripts.js" defer></script>
+</head>
+
+<body>
+
+    <h1>Электронный журнал</h1>
+
+    <nav>
+        <button data-section="uploadSection">Загрузка журнала</button>
+        <button data-section="viewSection">Просмотр журнала</button>
+        <button data-section="editSection">Редактирование журнала</button>
+        <button data-section="statsSection">Статистика</button>
+        <button data-section="helpSection">Помощь</button>
+        <button data-section="aboutSection">О программе</button>
+    </nav>
+
+    <section id="uploadSection" class="active">
+        <h2>Загрузите файл журнала в формате CSV или TXT</h2>
+        <input type="file" id="fileInput" accept=".csv,.txt" />
+        <p id="uploadMessage"></p>
+    </section>
+
+    <section id="viewSection">
+        <h2>Просмотр журнала</h2>
+        <div id="viewTableContainer"></div>
+    </section>
+
+    <section id="editSection">
+        <h2>Редактирование журнала</h2>
+        <button class="add-user" id="addUserBtn">Добавить пользователя</button>
+        <div class="export-buttons">
+            <button id="exportCSVBtn">Экспорт в CSV</button>
+            <button id="exportTXTBtn">Экспорт в TXT</button>
+        </div>
+        <div id="editTableContainer"></div>
+    </section>
+
+    <section id="statsSection">
+        <h2>Статистика: Средний и медианный балл по классам и предметам</h2>
+        <div id="chartContainer"></div>
+        <div id="tableContainer"></div>
+        <div id="statsGradeStats" class="grade-stats"></div>
+        <p id="noData" style="display:none; color:#555; margin-top:20px;">
+            Данные отсутствуют. Загрузите журнал в разделе "Загрузка журнала".
+        </p>
+    </section>
+
+    <section id="helpSection">
+        <h2>Помощь</h2>
+        <div style="font-size:1.1rem; line-height:1.7;">
+            <ul style="margin-left:0; padding-left:20px;">
+                <li><strong>Загрузка журнала:</strong><br>Загрузите файл с оценками в формате <b>CSV</b> или <b>TXT</b>. Данные сохраняются в браузере и доступны для просмотра и редактирования.</li>
+                <li><strong>Просмотр журнала:</strong><br>Таблица с оценками всех учеников по предметам. Только для чтения.</li>
+                <li><strong>Редактирование журнала:</strong><br>Изменяйте оценки, ФИО и класс, добавляйте и удаляйте учеников, экспортируйте данные.</li>
+                <li><strong>Статистика:</strong><br>Таблицы со средними и медианными баллами по классам и предметам.</li>
+                <li><strong>О программе:</strong><br>Информация об авторе и контакты.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="aboutSection">
+        <h2>О программе</h2>
+        <p>Электронный журнал - удобное веб-приложение для ведения оценок по классам и предметам.</p>
+        <p>Здесь вы можете загружать журнал в формате CSV или TXT, просматривать оценки, редактировать их, экспортировать данные и анализировать статистику.</p>
+        <p>Если у вас есть вопросы или предложения, пишите на почту:</p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=neheirby@gmail.com" target="_blank" class="email-link">neheirby@gmail.com</a>
+        <div style="text-align:center; margin-top:40px;">
+            <img src="https://sun9-62.userapi.com/s/v1/ig2/CdBGKJgVsYC3IUS4-K7OsxrqGnpV9ghvFO1iquggFVmWyfvQcIoLHLFKgGj1IDMsIaZyMiCPOWTjwgtjKYboIymB.jpg?quality=96&as=32x43,48x65,72x97,108x146,160x216,240x324,360x486,480x648,540x729,640x863,720x971,736x993&from=bu&cs=736x0"
+                alt="Фото автора" style="width:200px; height:200px; border-radius:50%; object-fit:cover; box-shadow:0 0 10px rgba(0,0,0,0.3);">
+            <p style="margin-top:10px; font-weight:bold; color:#fff;">Автор: Коноплев Юрий</p>
+        </div>
+    </section>
+
+</body>
+
+</html>
